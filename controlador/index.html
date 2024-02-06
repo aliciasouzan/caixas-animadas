@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Controlador</title>
+  </head>
+
+  <body>
+    <header>
+      <form id="inputs" action="http://localhost/backend/" method="POST">
+        <label for="numLinhas">Linhas</label>
+        <input type="number" id="numLinhas" min="1" value="3" />
+
+        <label for="numColunas">Colunas</label>
+        <input type="number" id="numColunas" min="1" value="3" />
+
+        <label for="sentido">Sentido</label>
+        <select id="sentido">
+          <option value="1">Horário</option>
+          <option value="-1">Anti-horário</option>
+        </select>
+
+        <label for="intervalo">Intervalo (ms)</label>
+        <input type="number" id="intervalo" min="1" value="1000" />
+
+        <button type="button" onclick="aplicarConfiguracoes()">Aplicar</button>
+      </form>
+    </header>
+
+    <div>
+      <iframe
+        id="iframeApp"
+        src="http://localhost/app/"
+        style="width: 100%; height: calc(100% - 110px)"
+      ></iframe>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
